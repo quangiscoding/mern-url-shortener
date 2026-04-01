@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { QRCode } from "react-qr-code";
 import QRCodeGenerator from "qrcode";
