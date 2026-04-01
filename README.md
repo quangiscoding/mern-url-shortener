@@ -132,7 +132,7 @@ default: Date.now
 
 2. In the backend folder, create a .env file like this:
    PORT=5001
-   MONGO_URI=your_mongodb_connection_string
+   MONGO_URI=mongodb+srv://quangnguyen2005gt08_db_user:bioQWXS0eGZl8fJI@cluster0.9dmy2up.mongodb.net/urls_db?appName=Cluster0
    BASE_URL=http://localhost:5001
 3. In the frontend folder, create a .env file like this:
    VITE_BACKEND_URL=http://localhost:5001/api/urls
