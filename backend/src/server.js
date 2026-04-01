@@ -22,13 +22,13 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/urls", urlRoutes);
-app.get("/:path", (_, res) => {
-  res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
-});
-
 app.get("/:shortId", getOriginalUrl);
 
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (_, res) => {
+  res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+});
 
 connectDB().then(() => {
   app.listen(PORT, () => {
