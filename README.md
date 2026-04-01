@@ -125,7 +125,7 @@ default: Date.now
 ### 4. How to Run
 
 1. Clone the Repository
-   git clone https://github.com/your-username/url-shortener.git
+   git clone https://github.com/quangiscoding/mern-url-shortener.git
    cd url-shortener
 
 2. In the backend folder, create a .env file like this:
