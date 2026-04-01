@@ -4,6 +4,9 @@ import { QRCode } from "react-qr-code";
 import QRCodeGenerator from "qrcode";
 import toast from "react-hot-toast";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5001/api/urls";
+
 const App = () => {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
@@ -17,7 +20,7 @@ const App = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post("/api/urls/shorten", {
+      const res = await axios.post(`${API_BASE_URL}/shorten`, {
         originalUrl: url,
       });
 
