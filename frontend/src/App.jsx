@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { QRCode } from "react-qr-code";
 import QRCodeGenerator from "qrcode";
 import toast from "react-hot-toast";
-
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const App = () => {
   const [url, setUrl] = useState("");
@@ -19,7 +17,7 @@ const App = () => {
     try {
       setLoading(true);
 
-      const res = await axios.post(`${API_BASE_URL}/shorten`, {
+      const res = await axios.post("/api/urls/shorten", {
         originalUrl: url,
       });
 
